@@ -115,6 +115,15 @@ body{
   }
 }
 
+#how-it-works{ 
+  scroll-margin-top: 90px; 
+}
+
+@media (max-width: 991px) { 
+  #how-it-works { scroll-margin-top: 120px; } 
+}
+
+
 /* Hero */
 .hero{
   position:relative;

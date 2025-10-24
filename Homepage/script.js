@@ -13,6 +13,13 @@ document.querySelectorAll('.section-header, .mission-card, .stat-item, .step-car
   observer.observe(el);
 });
 
+document.querySelectorAll('.navbar .nav-link').forEach(link => {
+    link.addEventListener('click', function() {
+      document.querySelectorAll('.navbar .nav-link').forEach(l => l.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+  
 // Counter animation for stats
 const animateCounter = (element, target) => {
   let current = 0;

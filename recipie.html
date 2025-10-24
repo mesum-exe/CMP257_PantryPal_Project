@@ -8,20 +8,60 @@
 </head>
 
 <body>
+<div id="pantrypal-dashboard-cards">
+        
+        <header class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">PantryPal</a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="inventory.html">Inventory</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Grocery Cart</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Recipes</a>
+                        </li>
+                    </ul>
+                    
+                    <ul class="navbar-nav d-flex">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                Alerts <span class="badge bg-danger">3</span>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                User Name
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Profile</a></li>
+                                <li><a class="dropdown-item" href="#">Settings</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+
   <header class="py-3 text-center border-bottom">
     <h1>Recipes</h1>
     <p class="lead mb-0">Add, view, and generate recipes based on your ingredients</p>
   </header>
 
-  <nav class="py-2 border-bottom">
-    <div class="container d-flex justify-content-center gap-3">
-      <a href="dashboard.html">Dashboard</a>
-      <a href="inventory.html">Inventory</a>
-      <a href="grocery.html">Grocery Cart</a>
-      <a href="recipes.html">Recipes</a>
-      <a href="meal_logs.html">Meal Logs</a>
-    </div>
-  </nav>
 
   <main class="container my-5">
 
@@ -165,9 +205,33 @@
     </section>
   </main>
 
-  <footer class="text-center py-3 border-top">
-    <p class="mb-0">© 2025 PantryPal | Recipes Module</p>
-  </footer>
+   
+        <footer class="bg-dark text-white text-center py-4 mt-5">
+            <div class="container">
+                
+                <div class="mb-3">
+                    <a href="#" class="text-white mx-2"><i class="bi bi-facebook fs-4"></i></a>
+                    <a href="#" class="text-white mx-2"><i class="bi bi-instagram fs-4"></i></a>
+                    <a href="#" class="text-white mx-2"><i class="bi bi-twitter-x fs-4"></i></a>
+                    <a href="#" class="text-white mx-2"><i class="bi bi-google fs-4"></i></a>
+                    <a href="#" class="text-white mx-2"><i class="bi bi-youtube fs-4"></i></a>
+                </div>
+
+                
+                <ul class="list-inline text-center mb-3">
+                    <li class="list-inline-item mx-3"><a href="#" class="text-white text-decoration-none">Home</a></li>
+                    <li class="list-inline-item mx-3"><a href="#" class="text-white text-decoration-none">News</a></li>
+                    <li class="list-inline-item mx-3"><a href="#" class="text-white text-decoration-none">About</a></li>
+                    <li class="list-inline-item mx-3"><a href="#" class="text-white text-decoration-none">Contact Us</a></li>
+                    <li class="list-inline-item mx-3"><a href="#" class="text-white text-decoration-none">Our Team</a></li>
+                </ul>
+
+                
+                <p class="mb-0">
+                    &copy; Copyright 2025 PantryPal
+                </p>
+            </div>
+        </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>

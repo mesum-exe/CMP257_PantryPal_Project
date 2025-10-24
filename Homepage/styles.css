@@ -68,9 +68,9 @@ body{
   background:rgba(186,230,115,0.1);
 }
 
-.nav-link.active{
-  color:#bae673;
-  background:rgba(186,230,115,0.15);
+.navbar .nav-link.active {
+  background: rgba(186,230,115,0.20);
+  color: #BAE673;
 }
 
 .btn-nav-cta{
@@ -413,7 +413,7 @@ body{
   right:40px;
   font-size:5rem;
   font-weight:800;
-  color:rgba(186,230,115,0.15);
+  color:rgba(186, 230, 115, 0.892);
 }
 
 /* Testimonials */

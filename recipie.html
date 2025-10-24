@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PantryPal | Recipes</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+<div id="pantrypal-dashboard-cards">
+        
+        <header class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">PantryPal</a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="inventory.html">Inventory</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Grocery Cart</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Recipes</a>
+                        </li>
+                    </ul>
+                    
+                    <ul class="navbar-nav d-flex">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                Alerts <span class="badge bg-danger">3</span>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                User Name
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Profile</a></li>
+                                <li><a class="dropdown-item" href="#">Settings</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+
+  <header class="py-3 text-center border-bottom">
+    <h1>Recipes</h1>
+    <p class="lead mb-0">Add, view, and generate recipes based on your ingredients</p>
+  </header>
+
+
+  <main class="container my-5">
+
+    <section class="mb-5">
+      <div class="row justify-content-center">
+        <div class="col-md-8 text-center">
+          <h2 class="mb-3">Generate Recipes from Your Inventory</h2>
+          <p>Click the button below to automatically suggest recipes using ingredients you already have.</p>
+          
+            <button type="submit" class="btn btn-outline-secondary">Generate Recipes</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-5">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <h2 class="mb-4 text-center">Add a New Recipe</h2>
+          <form action="#" method="post">
+            <div class="mb-3">
+              <label for="recipe-name" class="form-label">Recipe Name</label>
+              <input type="text" class="form-control" id="recipe-name" placeholder="Enter recipe name">
+            </div>
+
+            <div class="mb-3">
+              <label for="ingredients" class="form-label">Ingredients</label>
+              <textarea class="form-control" id="ingredients" rows="3" placeholder="List each ingredient on a new line"></textarea>
+            </div>
+
+            <div class="mb-3">
+              <label for="instructions" class="form-label">Instructions</label>
+              <textarea class="form-control" id="instructions" rows="4" placeholder="Write step-by-step instructions"></textarea>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Tags</label>
+              <div class="row">
+                <div class="col-md-3 col-sm-6">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="vegetarian" value="Vegetarian">
+                    <label class="form-check-label" for="vegetarian">Vegetarian</label>
+                  </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="vegan" value="Vegan">
+                    <label class="form-check-label" for="vegan">Vegan</label>
+                  </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="quick" value="Quick">
+                    <label class="form-check-label" for="quick">Quick</label>
+                  </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="dessert" value="Dessert">
+                    <label class="form-check-label" for="dessert">Dessert</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="text-center">
+              <button type="submit" class="btn btn-outline-secondary">Save Recipe</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="row justify-content-center">
+        <div class="col-md-10">
+          <h2 class="mb-4 text-center">Saved Recipes</h2>
+
+          <div class="row row-cols-1 row-cols-md-2 g-4">
+
+            <div class="col">
+              <div class="border rounded p-3 h-100 d-flex flex-column justify-content-between">
+                <div>
+                  <h4>Chocolate Brownies</h4>
+                  <p>Rich and fudgy homemade brownies made with cocoa and butter.</p>
+                  <p><strong>Tags:</strong> Dessert, Baked, Sweet</p>
+                </div>
+                <form action="#" method="post">
+                  <input type="hidden" name="recipe" value="Chocolate Brownies">
+                  <button type="submit" class="btn btn-outline-secondary btn-sm">View Details</button>
+                </form>
+              </div>
+            </div>
+
+
+            <div class="col">
+              <div class="border rounded p-3 h-100 d-flex flex-column justify-content-between">
+                <div>
+                  <h4>Spaghetti Aglio e Olio</h4>
+                  <p>Classic Italian pasta tossed with garlic, olive oil, and chili flakes.</p>
+                  <p><strong>Tags:</strong> Quick, Vegetarian, Dinner</p>
+                </div>
+                <form action="#" method="post">
+                  <input type="hidden" name="recipe" value="Spaghetti Aglio e Olio">
+                  <button type="submit" class="btn btn-outline-secondary btn-sm">View Details</button>
+                </form>
+              </div>
+            </div>
+
+
+            <div class="col">
+              <div class="border rounded p-3 h-100 d-flex flex-column justify-content-between">
+                <div>
+                  <h4>Chicken Tikka Wrap</h4>
+                  <p>Grilled chicken wrapped in flatbread with yogurt and fresh vegetables.</p>
+                  <p><strong>Tags:</strong> High Protein, Lunch, Quick</p>
+                </div>
+                <form action="#" method="post">
+                  <input type="hidden" name="recipe" value="Chicken Tikka Wrap">
+                  <button type="submit" class="btn btn-outline-secondary btn-sm">View Details</button>
+                </form>
+              </div>
+            </div>
+
+
+            <div class="col">
+              <div class="border rounded p-3 h-100 d-flex flex-column justify-content-between">
+                <div>
+                  <h4>Avocado Smoothie</h4>
+                  <p>Creamy smoothie made with avocado, banana, and a hint of honey.</p>
+                  <p><strong>Tags:</strong> Healthy, Breakfast, Vegan</p>
+                </div>
+                <form action="#" method="post">
+                  <input type="hidden" name="recipe" value="Avocado Smoothie">
+                  <button type="submit" class="btn btn-outline-secondary btn-sm">View Details</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+   
+        <footer class="bg-dark text-white text-center py-4 mt-5">
+            <div class="container">
+                
+                <div class="mb-3">
+                    <a href="#" class="text-white mx-2"><i class="bi bi-facebook fs-4"></i></a>
+                    <a href="#" class="text-white mx-2"><i class="bi bi-instagram fs-4"></i></a>
+                    <a href="#" class="text-white mx-2"><i class="bi bi-twitter-x fs-4"></i></a>
+                    <a href="#" class="text-white mx-2"><i class="bi bi-google fs-4"></i></a>
+                    <a href="#" class="text-white mx-2"><i class="bi bi-youtube fs-4"></i></a>
+                </div>
+
+                
+                <ul class="list-inline text-center mb-3">
+                    <li class="list-inline-item mx-3"><a href="#" class="text-white text-decoration-none">Home</a></li>
+                    <li class="list-inline-item mx-3"><a href="#" class="text-white text-decoration-none">News</a></li>
+                    <li class="list-inline-item mx-3"><a href="#" class="text-white text-decoration-none">About</a></li>
+                    <li class="list-inline-item mx-3"><a href="#" class="text-white text-decoration-none">Contact Us</a></li>
+                    <li class="list-inline-item mx-3"><a href="#" class="text-white text-decoration-none">Our Team</a></li>
+                </ul>
+
+                
+                <p class="mb-0">
+                    &copy; Copyright 2025 PantryPal
+                </p>
+            </div>
+        </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

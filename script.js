@@ -1,3 +1,4 @@
+// Work In Progress Logic: Currently Nonfunctional
 
 // Used for loading the Navbar onto every page without needing to copy and paste it.
 fetch('navbar.html')

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PantryPal Dashboard</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel = "stylesheet" href = "dashboardSTYLE.css">
+    <style>
+        
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="homepage.html">PantryPal</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="homepage.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="dashboardV2.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="inventoryV2.html">Inventory</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="bi bi-bell"></i> Alerts <span class="badge">3</span>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            User Name
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li><a class="dropdown-item" href="#">Settings</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <h1>Welcome Back, User Name!</h1>
+        <p class="lead">A quick look at your kitchen status.</p>
+
+        <div class="row g-4">
+            
+            <!-- Expiring Soon Card -->
+            <div class="col-lg-6 col-md-12">
+                <div class="card h-100">
+                    <div class="card-header bg-warning text-dark">
+                        <h5 class="mb-0">⚡️ Expiring Soon</h5>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="card-subtitle mb-3 text-muted">Items needing immediate attention (in the next 3 days).</h6>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Milk (Dairy)
+                                <span class="badge bg-danger">Expires: Tomorrow</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Lettuce (Produce)
+                                <span class="badge bg-warning text-dark">2 Days Left</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Eggs (Dairy)
+                                <span class="badge bg-warning text-dark">3 Days Left</span>
+                            </li>
+                        </ul>
+                        <p class="card-text mt-3 fw-bold">Total Items in Stock: 45</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="inventory.html" class="btn btn-primary btn-sm">Go to Inventory</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Shared Grocery Cart Card -->
+            <div class="col-lg-6 col-md-12">
+                <div class="card h-100">
+                    <div class="card-header">
+                        <h5 class="mb-0">🛒 Shared Grocery Cart</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text fs-4 fw-bold">8 Items Needed</p>
+                        <hr>
+                        <h6>Your Assignments:</h6>
+                        <ul class="list-group list-group-flush mb-3">
+                            <li class="list-group-item">Bread (Qty: 1)</li>
+                            <li class="list-group-item">Cheese Slices (Qty: 2)</li>
+                        </ul>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Quick Add Item...">
+                            <button class="btn btn-secondary" type="button">Add</button>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-secondary btn-sm">View Full Cart</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recipe Suggestion Card -->
+            <div class="col-lg-6 col-md-12">
+                <div class="card h-100">
+                    <div class="card-header">
+                        <h5 class="mb-0">🍽️ What Can We Cook?</h5>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="card-title fw-bold">Recipe Suggestion: Tomato Basil Pasta</h6>
+                        <p class="card-text text-success fw-bold">Ingredients Available: 6/6 (You have everything!)</p>
+                        <div class="mb-3">
+                            <span class="badge bg-info me-2">Vegetarian</span>
+                            <span class="badge bg-info">Quick Prep</span>
+                        </div>
+                        <hr>
+                        <h6 class="fw-bold">Next Planned Meal</h6>
+                        <p class="mb-0">Dinner on Friday: Chicken Stir-Fry</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-success btn-sm me-2">View Recipe</a>
+                        <a href="#" class="btn btn-outline-success btn-sm">Browse All</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Alerts & Activity Card -->
+            <div class="col-lg-6 col-md-12">
+                <div class="card h-100">
+                    <div class="card-header">
+                        <h5 class="mb-0">🔔 Recent Alerts & Activity</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <strong>Alert:</strong> Bread added to Grocery Cart. <span class="text-muted">(By John)</span>
+                            </li>
+                            <li class="list-group-item">
+                                <strong>Reminder:</strong> Milk expires tomorrow.
+                            </li>
+                            <li class="list-group-item">
+                                <strong>Activity:</strong> Sarah updated the quantity of rice.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-outline-dark btn-sm">See All Notifications</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="container">
+            <div class="mb-3">
+                <a href="#" class="mx-2"><i class="bi bi-facebook fs-4"></i></a>
+                <a href="#" class="mx-2"><i class="bi bi-instagram fs-4"></i></a>
+                <a href="#" class="mx-2"><i class="bi bi-twitter-x fs-4"></i></a>
+                <a href="#" class="mx-2"><i class="bi bi-google fs-4"></i></a>
+                <a href="#" class="mx-2"><i class="bi bi-youtube fs-4"></i></a>
+            </div>
+            <ul class="list-inline mb-3">
+                <li class="list-inline-item mx-3"><a href="homepage.html" class="text-decoration-none">Home</a></li>
+                <li class="list-inline-item mx-3"><a href="#" class="text-decoration-none">News</a></li>
+                <li class="list-inline-item mx-3"><a href="about.html" class="text-decoration-none">About</a></li>
+                <li class="list-inline-item mx-3"><a href="contact.html" class="text-decoration-none">Contact Us</a></li>
+            </ul>
+            <p class="mb-0">&copy; 2025 PantryPal – Making every meal count, together</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f5f5f0;
+    color: #333;
+    padding-top: 70px;
+}
+
+/* Navbar - matching homepage style */
+.navbar {
+    background: rgba(13, 31, 23, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 1rem 0;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+}
+
+.navbar-brand {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #bae673 ;
+    letter-spacing: -0.5px;
+}
+
+.navbar-brand:hover {
+    color: #a8d65e ;
+}
+
+.navbar-toggler {
+    border: 2px solid #bae673;
+    padding: 8px 12px;
+    background: rgba(186,230,115,0.1);
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.2rem rgba(186,230,115,0.25);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23bae673' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.nav-link {
+    color: rgba(255,255,255,0.85) ;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+}
+
+.nav-link:hover {
+    color: #bae673 !important;
+    background: rgba(186,230,115,0.1);
+}
+
+.nav-link.active {
+    color: #bae673 !important;
+    background: rgba(186,230,115,0.15);
+}
+
+.navbar .badge {
+    background: #bae673;
+    color: #0d1f17;
+}
+
+.dropdown-menu {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+}
+
+.dropdown-item:hover {
+    background: rgba(186,230,115,0.1);
+    color: #1a3d2e;
+}
+
+/* Navbar badge — unified style across dashboard and inventory */
+.navbar .nav-link .badge {
+  position: relative;
+  top: -1px;
+  margin-left: 6px;
+  padding: 0.3rem 0.45rem;
+  font-size: 0.75rem;
+  line-height: 1;
+  border-radius: 10px;
+  background: #bae673;
+  color: #0d1f17;
+  white-space: nowrap;
+}
+
+/* Keep the badge color consistent even when hovering or active */
+.navbar .nav-link:hover .badge,
+.navbar .nav-link.active .badge {
+  background: #bae673;
+  color: #0d1f17;
+}
+
+
+/* Main content */
+main {
+    padding: 2rem 0 4rem;
+}
+
+h1 {
+    color: #1a3d2e;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+.lead {
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+/* Cards */
+.card {
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+.card-header {
+    background: white;
+    border-bottom: 2px solid #f0f0f0;
+    padding: 1.25rem 1.5rem;
+    font-weight: 700;
+}
+
+.card-header.bg-warning {
+    background: linear-gradient(135deg, #ffc107 0%, #ffb300 100%) ;
+    border-bottom: none;
+}
+
+.card-header h5 {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-footer {
+    background: #fafafa;
+    border-top: 1px solid #f0f0f0;
+    padding: 1rem 1.5rem;
+}
+
+/* List items */
+.list-group-item {
+    border: none;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 1rem 0;
+}
+
+.list-group-item:last-child {
+    border-bottom: none;
+}
+
+/* Badges */
+.badge {
+    padding: 0.5rem 0.75rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.badge.bg-danger {
+    background: #dc3545 ;
+}
+
+.badge.bg-warning {
+    background: #ffc107 ;
+}
+
+.badge.bg-info {
+    background: #bae673 ;
+    color: #0d1f17 ;
+}
+
+/* Buttons */
+.btn-primary {
+    background: #bae673;
+    border: none;
+    color: #0d1f17;
+    font-weight: 600;
+    padding: 0.5rem 1.5rem;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #a8d65e;
+    color: #0d1f17;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(186,230,115,0.3);
+}
+
+.btn-secondary {
+    background: #6c757d;
+    border: none;
+    font-weight: 600;
+    padding: 0.5rem 1.5rem;
+    border-radius: 10px;
+}
+
+.btn-success {
+    background: #28a745;
+    border: none;
+    font-weight: 600;
+    padding: 0.5rem 1.5rem;
+    border-radius: 10px;
+}
+
+.btn-outline-success {
+    border: 2px solid #28a745;
+    color: #28a745;
+    font-weight: 600;
+    padding: 0.5rem 1.5rem;
+    border-radius: 10px;
+}
+
+.btn-outline-dark {
+    border: 2px solid #333;
+    color: #333;
+    font-weight: 600;
+    padding: 0.5rem 1.5rem;
+    border-radius: 10px;
+}
+
+.btn-sm {
+    font-size: 0.9rem;
+    padding: 0.4rem 1rem;
+}
+
+/* Footer */
+footer {
+    background: #0d1f17;
+    color: rgba(255,255,255,0.7);
+    padding: 3rem 0;
+    margin-top: 4rem;
+}
+
+footer a {
+    color: rgba(255,255,255,0.7);
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #bae673;
+}
+
+/* Input groups */
+.input-group .form-control {
+    border-radius: 10px 0 0 10px;
+    border: 2px solid #e0e0e0;
+}
+
+.input-group .btn {
+    border-radius: 0 10px 10px 0;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+}

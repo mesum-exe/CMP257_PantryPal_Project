@@ -12,6 +12,7 @@
 
     <div id="pantrypal-dashboard-cards">
         
+        <!-- Will be replaced when Header & Footer components are functioning -->
         <header class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">PantryPal</a>
@@ -23,16 +24,16 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Dashboard</a>
+                            <a class="nav-link active" aria-current="page" href="dashboard.html">Dashboard</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="inventory.html">Inventory</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Grocery Cart</a>
+                            <a class="nav-link" href="grocerycart.html">Grocery Cart</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Recipes</a>
+                            <a class="nav-link" href="recipes.html">Recipes</a>
                         </li>
                     </ul>
                     
@@ -50,13 +51,14 @@
                                 <li><a class="dropdown-item" href="#">Profile</a></li>
                                 <li><a class="dropdown-item" href="#">Settings</a></li>
                                 <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="#">Logout</a></li>
+                                <li><a class="dropdown-item" href="login.html">Logout</a></li>
                             </ul>
                         </li>
                     </ul>
                 </div>
             </div>
         </header>
+        
         <main class="container mt-4">
             <h1 class="mb-4">Welcome Back, User Name!</h1>
             <p class="lead">A quick look at your kitchen status.</p>
@@ -84,10 +86,10 @@
                                     <span class="badge bg-warning text-dark">3 Days Left</span>
                                 </li>
                             </ul>
-                            <p class="card-text mt-3">Total Items in Stock: **45**</p>
+                            <p class="card-text mt-3">Total Items in Stock: <strong>45</strong></p> <!-- Mock Data -->
                         </div>
                         <div class="card-footer">
-                            <a href="#" class="btn btn-primary btn-sm">Go to Inventory</a>
+                            <a href="inventory.html" class="btn btn-primary btn-sm">Go to Inventory</a>
                         </div>
                     </div>
                 </div>
@@ -98,12 +100,12 @@
                             <h5 class="mb-0">🛒 Shared Grocery Cart</h5>
                         </div>
                         <div class="card-body">
-                            <p class="card-text fs-4">**8** Items Needed</p>
+                            <p class="card-text fs-4"><strong>8</strong> Items Needed</p> <!-- Mock Data -->
                             <hr>
                             <h6>Your Assignments:</h6>
                             <ul class="list-group list-group-flush mb-3">
-                                <li class="list-group-item">Bread (Qty: 1)</li>
-                                <li class="list-group-item">Cheese Slices (Qty: 2)</li>
+                                <li class="list-group-item">Bread (Qty: <strong>1</strong>)</li> <!-- Mock Data -->
+                                <li class="list-group-item">Cheese Slices (Qty: <strong>2</strong>)</li> <!-- Mock Data -->
                             </ul>
                             <div class="input-group mb-3">
                                 <input type="text" class="form-control" placeholder="Quick Add Item...">
@@ -111,7 +113,7 @@
                             </div>
                         </div>
                         <div class="card-footer">
-                            <a href="#" class="btn btn-secondary btn-sm">View Full Cart</a>
+                            <a href="grocerycart.html" class="btn btn-secondary btn-sm">View Full Cart</a>
                         </div>
                     </div>
                 </div>
@@ -123,17 +125,18 @@
                         </div>
                         <div class="card-body">
                             <h6 class="card-title">Recipe Suggestion: Tomato Basil Pasta</h6>
-                            <p class="card-text text-success">Ingredients Available: **6/6** (You have everything!)</p>
+                            <p class="card-text">Ingredients Available: <strong>6/6</strong></p>
+                            <p class="card-text text-success">You have everything you need for this recipe!</p>
                             <span class="badge bg-info text-dark me-2">Vegetarian</span>
                             <span class="badge bg-info text-dark">Quick Prep</span>
                             
                             <hr>
-                            <h6>Next Planned Meal</h6>
-                            <p class="mb-0">Dinner on Friday: Chicken Stir-Fry</p>
+                            <h5>Next Planned Meal:</h5>
+                            <p class="mb-0">Dinner on Friday: Chicken Stir-Fry</p> <!-- Mock Data -->
                         </div>
                         <div class="card-footer">
-                            <a href="#" class="btn btn-success btn-sm me-2">View Recipe</a>
-                            <a href="#" class="btn btn-outline-success btn-sm">Browse All Recipes</a>
+                            <a href="recipes-current.html" class="btn btn-success btn-sm me-2">View Recipe</a>
+                            <a href="recipes.html" class="btn btn-outline-success btn-sm">Browse All Recipes</a>
                         </div>
                     </div>
                 </div>
@@ -145,13 +148,13 @@
                         </div>
                         <div class="card-body">
                             <ul class="list-group list-group-flush">
-                                <li class="list-group-item">**Alert:** Bread added to Grocery Cart. (By John)</li>
-                                <li class="list-group-item">**Reminder:** Milk expires tomorrow.</li>
-                                <li class="list-group-item">**Activity:** Sarah updated the quantity of rice.</li>
+                                <li class="list-group-item"><strong>Alert:</strong> Bread added to Grocery Cart <em>- John</em></li> <!-- Mock Data -->
+                                <li class="list-group-item"><strong>Reminder:</strong> Milk expires tomorrow.</li> <!-- Mock Data -->
+                                <li class="list-group-item"><strong>Activity:</strong> Rice quantity updated <em>- Sarah</em></li> <!-- Mock Data -->
                             </ul>
                         </div>
                         <div class="card-footer">
-                            <a href="#" class="btn btn-outline-dark btn-sm">See All Notifications</a>
+                            <a href="notifications.html" class="btn btn-outline-dark btn-sm">See All Notifications</a>
                         </div>
                     </div>
                 </div>
@@ -159,6 +162,7 @@
             </div> 
             </main>
         
+        <!-- Will be replaced when Header & Footer components are functioning -->
         <footer class="bg-dark text-white text-center py-4 mt-5">
             <div class="container">
                 

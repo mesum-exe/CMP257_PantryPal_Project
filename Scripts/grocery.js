@@ -313,28 +313,45 @@ function deleteItem(itemId) {
 }
 
 // Function to Transfer Purchased Items
+// Transfer Purchased Items (UPDATED)
 function transferPurchased() {
     const purchasedItems = groceryCart.filter(item => item.purchased);
-    
+
     if (purchasedItems.length === 0) {
         showNotification('No items marked as purchased', 'warning');
         return;
     }
-    
+
     const confirmMsg = `Transfer ${purchasedItems.length} item(s) to inventory?\n\nItems:\n${purchasedItems.map(i => `• ${i.name}`).join('\n')}`;
-    
+
     if (confirm(confirmMsg)) {
+
         purchasedItems.forEach(item => {
+            // ADD TO INVENTORY
+            inventory.push({
+                name: item.name,
+                category: "Uncategorized",
+                quantity: `${item.amount} ${item.unit}`,
+                inStock: true
+            });
+
+            // REMOVE FROM CART
             const index = groceryCart.findIndex(i => i.id === item.id);
-            if (index !== -1) {
-                groceryCart.splice(index, 1);
-            }
+            if (index !== -1) groceryCart.splice(index, 1);
         });
-        
+
+        // SAVE DATA
+        localStorage.setItem("inventoryData", JSON.stringify(inventory));
+        localStorage.setItem("groceryData", JSON.stringify(groceryCart));
+
+        if (typeof renderInventoryTable === "function") renderInventoryTable();
         renderGroceryList();
+
         showNotification(`${purchasedItems.length} item(s) transferred to inventory successfully!`, 'success');
     }
 }
+
+
 
 // Function to Clear All Items
 function clearAll() {

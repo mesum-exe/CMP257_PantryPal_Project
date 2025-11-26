@@ -39,18 +39,24 @@
             </ul>
             
             <ul class="navbar-nav d-flex">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        Alerts <span class="badge bg-danger">3</span>
-                    </a>
-                </li>
+                <li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="alertDropdown" role="button" 
+     data-bs-toggle="dropdown" aria-expanded="false">
+      Alerts <span class="badge">3</span>
+  </a>
+
+  <ul class="dropdown-menu dropdown-menu-end notifications-menu" aria-labelledby="alertDropdown">
+      <!-- Notifications will be loaded here dynamically -->
+      <li class="dropdown-item text-muted small">No new alerts</li>
+  </ul>
+</li>
+
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         User Name
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Profile</a></li>
-                        <li><a class="dropdown-item" href="#">Settings</a></li>
+                        <li><a class="dropdown-item" href="profile.html">Profile</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="login.html">Logout</a></li>
                     </ul>

@@ -521,6 +521,56 @@ footer a:hover {
     }
 }
 
+/* CHECKBOX STYLING BELOW */
+        
+.input-group:focus-within .input-group-text,
+.input-group:focus-within .form-control {
+    border-color: #bae673 !important;
+    box-shadow: 0 0 0 0.2rem rgba(186,230,115,0.25);
+    background-color: white !important;
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+    z-index: 5; /* Bring above siblings to show shadow */
+}
+
+/* Existing Animations needed for JS */
+    @keyframes slideIn {
+        from { transform: translateX(400px); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+    }
+    @keyframes slideOut {
+        from { transform: translateX(0); opacity: 1; }
+        to { transform: translateX(400px); opacity: 0; }
+    }
+    @keyframes shake {
+        0%, 100% { transform: translateX(0); }
+        25% { transform: translateX(-10px); }
+        75% { transform: translateX(10px); }
+    }
+    .is-invalid {
+        animation: shake 0.5s;
+        border-color: #dc3545;
+    }
+    .priority-indicator {
+        width: 5px;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    .priority-high { background-color: #dc3545; }
+    .priority-normal { background-color: #28a745; }
+    .list-group-item {
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s ease;
+    }
+    .slide-in {
+        animation: slideIn 0.3s ease-out forwards;
+    }
+
+/* CHECKBOX STYLING DONE */
+
 /* Stats Summary */
 .stats-summary {
     background: white;

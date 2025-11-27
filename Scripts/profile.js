@@ -7,14 +7,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const changePicBtn = document.getElementById("changePicBtn");
   const DEFAULT_PIC = "/assets/default-user.png";
 
-  // 1. Load saved or default picture on page load
   const savedPic = localStorage.getItem("pantryProfilePic");
   profilePic.src = savedPic || DEFAULT_PIC;
 
-  // 2. Trigger file input when button is clicked
   changePicBtn.addEventListener("click", () => picInput.click());
 
-  // 3. Handle file selection and save to localStorage
   picInput.addEventListener("change", (e) => {
     const file = e.target.files[0];
     if (!file) return;
@@ -22,7 +19,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const reader = new FileReader();
     reader.onload = () => {
       profilePic.src = reader.result;
-      // Save the image as a data URL
       localStorage.setItem("pantryProfilePic", reader.result);
     };
     reader.readAsDataURL(file);
@@ -72,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
     localStorage.setItem("pantryEmail", email);
     
     // WARNING: In a production app, do NOT store raw passwords. 
-    // For this local environment, we'll store it only to ensure the input field loads the value next time.
+    // For  local environment, we'll store it only to ensure the input field loads the value next time.
     // If you prefer to NOT store it, comment out the line below.
     localStorage.setItem("pantryPassword", password); 
     
@@ -97,7 +93,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const newMemberInput = document.getElementById("newMemberInput");
   const addMemberBtn = document.getElementById("addMemberBtn");
 
-  // Load existing list or default ones
   let members = JSON.parse(localStorage.getItem("pantryHousehold")) || [
     "Ali Ahmed (Father)",
     "Fatima Ali (Mother)",
@@ -123,10 +118,8 @@ document.addEventListener("DOMContentLoaded", () => {
     renderMembers();
   };
   
-  // Initial render
   renderMembers();
 
-  // Add new member
   addMemberBtn.addEventListener("click", () => {
     if (newMemberInput.value.trim() === "") return;
     members.push(newMemberInput.value.trim());

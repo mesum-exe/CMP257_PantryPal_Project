@@ -75,7 +75,7 @@
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23bae673' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
-/* 🛠 Force full width navbar on ALL pages (container & container-fluid) */
+/*Force full width navbar on all pages */
 header.navbar .container,
 header.navbar .container-fluid {
     width: 100% !important;
@@ -84,7 +84,7 @@ header.navbar .container-fluid {
     padding-left: 1.5rem;
 }
 
-/* 🧱 Prevent content hiding under navbar */
+/*Prevent content hiding under navbar */
 body {
     padding-top: 80px !important;
 }

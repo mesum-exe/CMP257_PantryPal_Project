@@ -85,7 +85,6 @@ function initForgotPasswordForm() {
       return;
     }
     
-    // Simulate sending reset link
     showAlert('Reset link sent to your email!', 'success');
     setTimeout(() => {
       window.location.href = 'login.html';

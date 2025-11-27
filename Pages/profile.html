@@ -97,6 +97,41 @@
     </div>
   </div>
   <script type="module" src="/Scripts/notifications.js"></script>
+  <script type="module">
+  import { getInventoryAlerts } from "/Scripts/alerts.js";
+  import { notify } from "/Scripts/notifications.js";
+
+  // Load inventory from localStorage (shared across pages)
+  const inventory = JSON.parse(localStorage.getItem("inventoryItems")) || [];
+
+  // Get alerts
+  const alerts = getInventoryAlerts(inventory);
+
+  // Update badge count
+  const badge = document.querySelector("#alertDropdown .badge");
+  if (badge) {
+    badge.textContent = alerts.length;
+    badge.style.display = alerts.length > 0 ? "inline-block" : "none";
+  }
+
+  // Populate dropdown list
+  const dropdown = document.querySelector(".notifications-menu");
+  if (dropdown) {
+    dropdown.innerHTML = ""; // clear old
+    
+    if (!alerts.length) {
+      dropdown.innerHTML = `<li class="dropdown-item text-muted small">No alerts 🎉</li>`;
+    } else {
+      alerts.forEach((a) => {
+        dropdown.innerHTML += `
+          <li class="dropdown-item small">
+            <strong>${a.name}</strong>
+            <br><span class="text-muted">${a.type}</span>
+          </li>`;
+      });
+    }
+  }
+</script>
 
   <script src="profile.js"></script>
 </body>

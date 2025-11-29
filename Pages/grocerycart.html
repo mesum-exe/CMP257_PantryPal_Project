@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PantryPal Grocery Cart</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-H60MA9hM2Q8uC7eB40r1iQ7kC0lP0/U47+T7F7L7pDq1S5D2e8u8D9wT5H2C9I3B" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel = "stylesheet" href = "../Styles/navbar.css">
     <link href = "../Styles/grocery-styles.css" rel = "stylesheet">
@@ -14,57 +16,54 @@
     <div id="pantrypal-grocery-cart-page">
         
       <!-- Navbar -->
-<header class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="homepage.html">PantryPal</a>
-        
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link" href="dashboard.html">Dashboard</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="inventory.html">Inventory</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="grocerycart.html">Grocery Cart</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="recipes.html">Recipes</a>
-                </li>
-            </ul>
-            
-            <ul class="navbar-nav d-flex">
-                <li class="nav-item dropdown">
-  <a class="nav-link dropdown-toggle" href="#" id="alertDropdown" role="button" 
-     data-bs-toggle="dropdown" aria-expanded="false">
-      Alerts <span class="badge">3</span>
-  </a>
-
-  <ul class="dropdown-menu dropdown-menu-end notifications-menu" aria-labelledby="alertDropdown">
-      <!-- Notifications will be loaded here dynamically -->
-      <li class="dropdown-item text-muted small">No new alerts</li>
-  </ul>
-</li>
-
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        User Name
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="profile.html">Profile</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="login.html">Logout</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </div>
-</header>
+		<header class="navbar navbar-expand-lg navbar-light bg-light">
+		    <div class="container-fluid">
+		        <a class="navbar-brand" href="homepage.html">PantryPal</a>
+		        
+		        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		            <span class="navbar-toggler-icon"></span>
+		        </button>
+		        
+		        <div class="collapse navbar-collapse" id="navbarNav">
+		            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+		                <li class="nav-item">
+		                    <a class="nav-link" href="dashboard.html">Dashboard</a>
+		                </li>
+		                <li class="nav-item">
+		                    <a class="nav-link" href="inventory.html">Inventory</a>
+		                </li>
+		                <li class="nav-item">
+		                    <a class="nav-link active" aria-current="page" href="grocerycart.html">Grocery Cart</a>
+		                </li>
+		                <li class="nav-item">
+		                    <a class="nav-link" href="recipes.html">Recipes</a>
+		                </li>
+		            </ul>
+		            
+		            <ul class="navbar-nav d-flex">
+						<li class="nav-item dropdown">
+		                    <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+		                        Alerts <span class="badge bg-danger" style="display:none;">0</span>
+		                    </a>
+		                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="alertsDropdown" id="alert-dropdown-list">
+		                        <li><span class="dropdown-item text-muted small">Loading...</span></li>
+		                    </ul>
+		                </li>
+		
+		                <li class="nav-item dropdown">
+		                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+		                        User Name
+		                    </a>
+		                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+		                        <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+		                        <li><hr class="dropdown-divider"></li>
+		                        <li><a class="dropdown-item" href="login.html">Logout</a></li>
+		                    </ul>
+		                </li>
+		            </ul>
+		        </div>
+		    </div>
+		</header>
 
         <main class="container mt-5">
             <h1 class="mb-4 d-flex align-items-center">
@@ -127,69 +126,30 @@
             </ul>
         </main>
 
-        <footer class="text-center">
-                    <div class="container">
-                        <div class="mb-3">
-                            <a href="#" class="text-white mx-2"><i class="bi bi-facebook fs-4"></i></a>
-                            <a href="#" class="text-white mx-2"><i class="bi bi-instagram fs-4"></i></a>
-                            <a href="#" class="text-white mx-2"><i class="bi bi-twitter-x fs-4"></i></a>
-                            <a href="#" class="text-white mx-2"><i class="bi bi-google fs-4"></i></a>
-                            <a href="#" class="text-white mx-2"><i class="bi bi-youtube fs-4"></i></a>
-                        </div>
-                        <ul class="list-inline text-center mb-3">
-                            <li class="list-inline-item mx-3"><a href="#" class="text-white text-decoration-none">Home</a></li>
-                            <li class="list-inline-item mx-3"><a href="#" class="text-white text-decoration-none">News</a></li>
-                            <li class="list-inline-item mx-3"><a href="#" class="text-white text-decoration-none">About</a></li>
-                            <li class="list-inline-item mx-3"><a href="#" class="text-white text-decoration-none">Contact Us</a></li>
-                            <li class="list-inline-item mx-3"><a href="#" class="text-white text-decoration-none">Our Team</a></li>
-                        </ul>
-                        <p class="mb-0">
-                            &copy; Copyright 2025 PantryPal
-                        </p>
-                    </div>
-        </footer>
+	    <!-- Footer -->
+	    <footer class="text-center">
+	        <div class="container">
+	            <div class="mb-3">
+	                <a href="#" class="mx-2"><i class="bi bi-facebook fs-4"></i></a>
+	                <a href="#" class="mx-2"><i class="bi bi-instagram fs-4"></i></a>
+	                <a href="#" class="mx-2"><i class="bi bi-twitter-x fs-4"></i></a>
+	                <a href="#" class="mx-2"><i class="bi bi-google fs-4"></i></a>
+	                <a href="#" class="mx-2"><i class="bi bi-youtube fs-4"></i></a>
+	            </div>
+	            <ul class="list-inline mb-3">
+	                <li class="list-inline-item mx-3"><a href="Homepage/homepage.html" class="text-decoration-none">Home</a></li>
+	                <li class="list-inline-item mx-3"><a href="news.html" class="text-decoration-none">News</a></li>
+	                <li class="list-inline-item mx-3"><a href="about.html" class="text-decoration-none">About</a></li>
+	                <li class="list-inline-item mx-3"><a href="contact.html" class="text-decoration-none">Contact Us</a></li>
+	            </ul>
+	            <p class="mb-0">&copy; 2025 PantryPal – Making every meal count, together</p>
+	        </div>
+	    </footer>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script type="module" src="/Scripts/notifications.js"></script>
-     <script type="module">
-  import { getInventoryAlerts } from "/Scripts/alerts.js";
-  import { notify } from "/Scripts/notifications.js";
-
-  // Load inventory from localStorage (shared across pages)
-  const inventory = JSON.parse(localStorage.getItem("inventoryItems")) || [];
-
-  // Get alerts
-  const alerts = getInventoryAlerts(inventory);
-
-  // Update badge count
-  const badge = document.querySelector("#alertDropdown .badge");
-  if (badge) {
-    badge.textContent = alerts.length;
-    badge.style.display = alerts.length > 0 ? "inline-block" : "none";
-  }
-
-  // Populate dropdown list
-  const dropdown = document.querySelector(".notifications-menu");
-  if (dropdown) {
-    dropdown.innerHTML = ""; // clear old
-    
-    if (!alerts.length) {
-      dropdown.innerHTML = `<li class="dropdown-item text-muted small">No alerts 🎉</li>`;
-    } else {
-      alerts.forEach((a) => {
-        dropdown.innerHTML += `
-          <li class="dropdown-item small">
-            <strong>${a.name}</strong>
-            <br><span class="text-muted">${a.type}</span>
-          </li>`;
-      });
-    }
-  }
-</script>
-    <script src="/Scripts/inventoryscript.js"></script> 
-    <script src="/Scripts/grocery.js"></script>
-
+    <script src="../Scripts/grocery.js"></script>
+    <script src="../Scripts/alerts.js"></script>
     
 </body>
 </html>

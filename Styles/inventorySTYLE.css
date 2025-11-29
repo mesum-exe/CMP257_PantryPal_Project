@@ -183,40 +183,6 @@ h1 {
     color: #6a1b9a;
 }
 
-/* Stats section */
-.stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-    margin-top: 1rem;
-}
-
-.stat-card {
-    background: linear-gradient(135deg, #bae673 0%, #a8d65e 100%);
-    padding: 1.5rem;
-    border-radius: 15px;
-    text-align: center;
-    transition: all 0.3s ease;
-}
-
-.stat-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(186,230,115,0.3);
-}
-
-.stat-card h3 {
-    font-size: 2.5rem;
-    font-weight: 800;
-    color: #0d1f17;
-    margin-bottom: 0.5rem;
-}
-
-.stat-card p {
-    color: rgba(13,31,23,0.8);
-    font-weight: 600;
-    margin: 0;
-}
-
 /* Footer */
 footer {
     background: #0d1f17;

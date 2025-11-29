@@ -800,3 +800,16 @@ body {
     margin-bottom: 1.2rem;
     background: #e8e8e8;
 }
+
+/* Shuffle Button Styling */
+#shuffleBtn {
+    background-color: rgba(13, 31, 23, 0.98); /* Dark Green Navbar Color */
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+#shuffleBtn:hover {
+    background-color: #a8d65e; /* Light Green Hover */
+    color: #0d1f17;
+}
